@@ -18,12 +18,14 @@ Another file in this directory is by the name **scaledobject.yaml**. More inform
 2. The **connection** property should be set to the name of the key which is defined as an environment variable in **kedasbreceiver-deployment.yaml**. <br />
 3. The namespace of both -- the scaledobject as well as the deployment should be the same. <br />
 <br />
+
 ## Azure setup
 The following services need to be provisioned in Azure: <br />
 1. Azure Service Bus queue: I have used the name of the queue as **kedaqueue**. <br />
 2. Azure Container Registry: To store the Docker images for the container created from **kedasbreceiver.py**. <br />
 3. AKS: AKS should have KEDA deployed. Steps for the same can be found at: https://www.thinktecture.com/en/kubernetes/serverless-workloads-with-keda/ <br /> . The container created from **kedasbreceiver.py** will be deployed here. <br />
 <br />
+
 ## Flow
 Executing **kedasbclient.py** will enqueue predefined number of messages to the Azure Service Bus Queue. The Scaled Object defined using **scaledobject.yaml** will scale the pods created of **kedasbreceiver.py** in the AKS based in the messages enqueued in the Azure Service Bus queue. 
 
