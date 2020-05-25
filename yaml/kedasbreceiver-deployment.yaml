@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: kedatestns
+  name: kedatest-deployment
+spec:
+  selector:
+    matchLabels:
+      app: kedatestapp
+  template:
+    metadata:
+      labels:
+        app: kedatestapp      
+    spec:
+      containers:
+      - name: kedatestappcont
+        image: <>
+        env: 
+        - name: SERVICEBUS_CONNECTIONSTRING_ENV_NAME
+          value: "<>"
+        resources:
+          limits:
+            cpu: 0.25 
