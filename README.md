@@ -24,7 +24,7 @@ Another file in this directory is by the name **scaledobject.yaml**. More inform
 The following services need to be provisioned in Azure: <br />
 1. Azure Service Bus queue: I have used the name of the queue as **kedaqueue**. <br />
 2. Azure Container Registry: To store the Docker images for the container created from **kedasbreceiver.py**. <br />
-3. AKS: AKS should have KEDA deployed. Steps for the same can be found at: https://www.thinktecture.com/en/kubernetes/serverless-workloads-with-keda/ <br /> . The container created from **kedasbreceiver.py** will be deployed here. <br />
+3. AKS: AKS should have KEDA deployed. Steps for the same can be found at: https://www.thinktecture.com/en/kubernetes/serverless-workloads-with-keda/serverless-workloads-with-keda/ <br /> . The container created from **kedasbreceiver.py** will be deployed here. <br />
 <br />
 
 ## Flow
